@@ -1,21 +1,38 @@
 <div id="home">
-  <div class="container">
+  <div class="pure-container">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Login</a></li>
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <a href="#" id="menuLink1" class="pure-menu-link">Menu</a>
+          <ul class="pure-menu-children">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Pantry</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Shopping List</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Add A Drink!</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
+        <h1><span class="title">Cocktail Party!</span></h1>
+        <form class="pure-container mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="drink-search">Find Your Next Drink Here:</label>
+            <input type="search" id="drink-search" class="form-control" aria-describedby="drink-search"
+              placeholder="Margarita">
+            <button class="pure-button">
+              <i class="fa fa-hourglass">Search</i>
+            </button>
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="example-description">modal here for drinks to show</label>
+            <img class="modal" id="placeholder-img" href="https://placeholder.com/"><img
+              src="https://via.placeholder.com/150"></a>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
+        <h3>Footer goes here</h3>
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
