@@ -16,3 +16,11 @@
 .body {
   text-align: center;
 }
+
+.pure-menu-selected > .pure-menu-link:visited {
+  color: white;
+}
+
+.pure-menu-link {
+  color: white;
+}
