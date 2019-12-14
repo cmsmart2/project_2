@@ -13,18 +13,8 @@ htmlRoutes.get("/", async (req, res) => {
 });
 
 // Load example page and pass in an example by id
-htmlRoutes.get("/example/:id", async (req, res) => {
-  const options = {
-    where: {
-      id: req.params.id
-    }
-  };
-
-  const dbExample = await db.Example.findOne(options);
-
-  res.render("example", {
-    example: dbExample
-  });
+htmlRoutes.get("/favorites", async (req, res) => {
+  res.render("favorites", {});
 });
 
 // Render 404 page for any unmatched routes
