@@ -1,50 +1,60 @@
-<div id="home">
-  <div class="pure-container">
-    <div class="pure-menu pure-menu-horizontal">
+<div id="layout">
+  <!-- Menu toggle -->
+  <a href="#menu" id="menuLink" class="menu-link">
+    <!-- Hamburger icon -->
+    <span></span>
+  </a>
+
+  <div id="menu">
+    <div class="pure-menu">
+      <a class="pure-menu-heading" href="#">Drink Menu</a>
+
       <ul class="pure-menu-list">
-        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Login</a></li>
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-          <a href="#" id="menuLink1" class="pure-menu-link">Menu</a>
-          <ul class="pure-menu-children">
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Pantry</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Shopping List</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Add A Drink!</a></li>
-          </ul>
-        </li>
-      </ul>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Favorites</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Pantry</a></li>
+
+        
+    </ul>
     </div>
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1><span class="title">Cocktail Party!</span></h1>
-        <form class="pure-container mb-4" action="POST">
-          <div class="form-group">
-            <label for="drink-search">Find Your Next Drink Here:</label>
-            <input type="search" id="drink-search" class="form-control" aria-describedby="drink-search"
-              placeholder="Margarita">
-            <button class="pure-button">
-              <i class="fa fa-hourglass">Search</i>
-            </button>
-          </div>
-          <div class="form-group">
-            <label for="example-description">modal here for drinks to show</label>
-            <img class="modal" id="placeholder-img" href="https://placeholder.com/"><img
-              src="https://via.placeholder.com/150"></a>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Footer goes here</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+  </div>
+
+  <div id="main">
+    
+    <div class="header">
+      <h1>Cocktail Party</h1>
+    </div>
+
+    
+    <form class="pure-form">
+      <input type="text" class="pure-input-squared">
+      <button type="submit" class="pure-button">Search</button>
+    </form>
+    
+  
+
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+      </div>
+      <div class="pure-u-1-4">
+        <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+      </div>
+      <div class="pure-u-1-4">
+        <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
+      </div>
+      <div class="pure-u-1-4">
+        <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
       </div>
     </div>
   </div>
-</div>
+
+
+<script src="/combo/1.18.13?/js/ui.js"></script>
+
+
+</body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
+<script src="/test/drinkapi.js"></script>
