@@ -13,6 +13,36 @@ body, html {
 
 }
 
+.signup {   
+  background-image: url(../styles/images/signup2.jpg);
+  height: 100%;   
+  background-repeat: no-repeat;   
+  background-size: cover;
+}
+.signup-form {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.signup-text {
+    text-align: center;
+    color: rgb(241, 229, 232);
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+#signup-button {
+  background-color: #333;
+}
 /*
 Add transition to containers so they can push in and out.
 */
