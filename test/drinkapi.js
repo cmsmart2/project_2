@@ -14,7 +14,7 @@ $("#btn").on("click", function (event) {
     var alcoholType = alcohol.toLowerCase();
     var APIKey = "9973533";
     var queryURL =
-        "https://www.thecocktaildb.com/api/json/v2/9973533/recent.php" +
+        "https://www.thecocktaildb.com/api/json/v2/9973533/search.php" +
         alcoholType +
         "?ingredients=" +
         drinkName +
@@ -46,9 +46,9 @@ $("#btn").on("click", function (event) {
                 );
                 // favorite Button
                 var favoriteBtn = $(
-                    `<button type="button" class=" favoriteAlcohol btn btn-info float-right mr-2 mt-2">&#9733; Add to Favorite </button>`
+                    `<button type="button" class=" pure-button">; Add to Favorite </button>`
                 );
                 // unfavorite the alcohol
-                var unfavorite = $(
-                    `<button type="button" class=" unfavoriteAlcohol btn btn-danger float-right mr-2 mt-2">Remove From Favorites </button>`
-                );
+                //var unfavorite = $(
+                   // `<button type="button" class=" unfavoriteAlcohol btn btn-danger float-right mr-2 mt-2">Remove From Favorites </button>`
+                //);
