@@ -6,8 +6,8 @@ branches:
 cache:
   directories:
     - node_modules
-service:
-  
+services:
+ develop
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE testdb;'
