@@ -93,7 +93,30 @@ var handleDeleteBtnClick = function() {
     refreshExamples();
   });
 };
-
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+// swiper ready function
+$(document).ready(function() {
+  window.swiper = new Swiper(".swiper-container", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    speed: 1200,
+    autoplay: {
+      delay: 5000
+    },
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    },
+    pagination: {
+      el: ".swiper-pagination"
+    }
+  });
+});
