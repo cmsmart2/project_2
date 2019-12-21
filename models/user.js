@@ -32,7 +32,7 @@ module.exports = function(sequelize, Sequelize) {
       allowNull: false
     },
 
-    last_login: {
+    lastLogin: {
       type: Sequelize.DATE
     },
 
