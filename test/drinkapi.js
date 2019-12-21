@@ -34,24 +34,24 @@ $("#btn").on("click", function(event) {
       if (alcoholType === "alcohol") {
         var sectionDiv = $("<div class='card_content'>");
         // designation
-        var response_fullName = response.data[i].title;
-        // console.log(response_fullName);
-        sectionDiv.attr("name", response_fullName);
-        var cardName = $(
-          "<div class='card mb-2 result_description w3-text-khaki'>"
-        );
-        var cardBody = $("<div class='card-body bg-dark p-1 my-auto'>");
-        var cardContent = $(
-          "<h4 class=' ml-3 my-auto'>" + response_fullName + "</h4>"
-        );
+        var responseFullName = response.data[i].title;
+        // console.log(responseFullName);
+        sectionDiv.attr("name", responseFullName);
+        // var cardName = $(
+        //   "<div class='card mb-2 result_description w3-text-khaki'>"
+        // );
+        // var cardBody = $("<div class='card-body bg-dark p-1 my-auto'>");
+        // var cardContent = $(
+        //   "<h4 class=' ml-3 my-auto'>" + responseFullName + "</h4>"
+        // );
         // search Button
-        var favoriteBtn = $(
-          "<button type=\"button\" class=\" pure-button\">&#9733; Add to Favorite </button>"
-        );
+        // var favoriteBtn = $(
+        //   "<button type=\"button\" class=\" pure-button\">&#9733; Add to Favorite </button>"
+        // );
         // unfavorite the alcohol
-        var unfavorite = $(
-          "<button type=\"button\" class=\" unfavoriteAlcohol btn btn-danger float-right mr-2 mt-2\">Remove From Favorites </button>"
-        );
+        // var unfavorite = $(
+        //   "<button type=\"button\" class=\" unfavoriteAlcohol btn btn-danger float-right mr-2 mt-2\">Remove From Favorites </button>"
+        // );
       }
     }
   });
