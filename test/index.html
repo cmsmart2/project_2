@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The Button Element</h2>
+    <button type="button" onclick="testButton()">Click Me!</button>
+
+    <div id="root"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="drinkapibeta.js"></script>
+    <script>function testButton() {
+            const queryURL = "http://127.0.0.1:3000/api/searchCocktail"
+            $.ajax({
+                url: queryURL,
+                method: "POST",
+                data: {
+                    cocktail: "whiskey"
+                }
+            }).then(function (response) {
+                console.log(response)
+            })
+
+        } </script>
+
+</body>
+
+</html>
