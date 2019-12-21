@@ -7,6 +7,7 @@ cache:
   directories:
     - node_modules
 services:
+ develop
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE testdb;'
