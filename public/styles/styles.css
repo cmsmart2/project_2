@@ -1,4 +1,4 @@
-body {
+body, html {
   background-image: url("../styles/images/drink.jpg");
   height: 100%;
   background-position: center;
@@ -7,10 +7,42 @@ body {
 }
 
 .pure-img-responsive {
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
+  padding: 2px;
+
 }
 
+.signup {   
+  background-image: url(../styles/images/signup2.jpg);
+  height: 100%;   
+  background-repeat: no-repeat;   
+  background-size: cover;
+}
+.signup-form {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.signup-text {
+    text-align: center;
+    color: rgb(241, 229, 232);
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+#signup-button {
+  background-color: #333;
+}
 /*
 Add transition to containers so they can push in and out.
 */
@@ -50,16 +82,44 @@ The content `<div>` is where all your content goes.
   margin-bottom: 50px;
   line-height: 1.6em;
 }
-
+.title {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+ -webkit-background-clip: text;
+  background-clip: text;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+}
+body {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px !important;
+  height: 300px !important;
+}
 .header {
-   margin: 0;
+   margin-top: 0;
    color: white;
    text-align: center;
-   padding: 2.5em 2em 0;
+   padding: 0;
    border-bottom: 1px solid #eee;
+   font-size: 30px;
 }
   .header h1 {
-      margin: 0.2em 0;
+      margin-bottom: 0.2em 0;
       font-size: 3em;
       font-weight: 300;
   }
@@ -74,6 +134,16 @@ The content `<div>` is where all your content goes.
   margin: 50px 0 20px 0;
   font-weight: 300;
   color:white;
+}
+
+.pure-form {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.pure-g {
+  text-align: center;
+  margin: 10px;
 }
 
 
@@ -251,4 +321,5 @@ Hides the menu at `48em`, but modify this based on your app's needs.
       position: relative;
       left: 150px;
   }
+
 }
