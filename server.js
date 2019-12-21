@@ -53,7 +53,7 @@ models.sequelize
 
 // Routes
 const authRoute = require("./routes/auth.js")(app, passport);
-app.use(authRoute);
+app.get(authRoute);
 app.use(routes);
 app.get("/", function(req, res) {
   res.send("Welcome to Passport with Sequelize");
