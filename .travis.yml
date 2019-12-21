@@ -10,4 +10,4 @@ services:
  develop
   - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE testdb;'
+  - mysql -e 'CREATE DATABASE users_db;'
