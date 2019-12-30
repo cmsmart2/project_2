@@ -14,7 +14,8 @@ body, html {
 }
 
 .signup {   
-  background-image: url(../styles/images/signup2.jpg);
+  /* background-image: url(../styles/images/signup2.jpg); */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../styles/images/signup2.jpg);
   height: 100%;   
   background-repeat: no-repeat;   
   background-size: cover;
@@ -37,7 +38,7 @@ body, html {
 .signup-text {
     text-align: center;
     color: rgb(241, 229, 232);
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 #signup-button {
