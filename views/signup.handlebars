@@ -5,17 +5,25 @@
 </head>
  
 <body class="signup">
+   {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
     <form class="signup-form" id="signup" name="signup" method="post" action="/signup">
         <div class="signup-text">Sign up for Free!</div>
-        <label for="email" class="signup-text">Email Address</label>
-        <input id="signupInput" class="text" name="email" type="email" />
-        <label for="firstname" class="signup-text">Firstname</label>
-        <input id="signupInput" name="firstname" type="text" />
-        <label for="lastname" class="signup-text">Lastname</label>
-        <input id="signupInput" name="lastname" type="text" />
-        <label for="password" class="signup-text">Password</label>
-        <input id="signupInput" name="password" type="password" />
-        <input class="btn" id="signup-button" type="submit" value="Sign Up" />
+        <br>
+        <label for="email" class="signup-text">Email Address: </label>
+        <input class="text" name="email" type="email"/>
+        <br>
+        <label for="firstname" class="signup-text">Firstname: </label>
+        <input name="firstname" type="text"/>
+        <br>
+        <label for="lastname" class="signup-text">Lastname: </label>
+        <input name="lastname" type="text"/>
+        <br>
+        <label for="password" class="signup-text">Password: </label>
+        <input name="password" type="password"/>
+        <br>
+        <input class="btn" id="signup-button" type="submit" value="Sign Up"/>
     </form>
  
 </body>

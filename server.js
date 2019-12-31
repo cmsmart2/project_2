@@ -3,14 +3,14 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const routes = require("./routes");
 const db = require("./models");
-
+const flash = require("connect-flash");
 const app = express();
 const passport = require("passport");
 const session = require("express-session");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 // const env = require('dotenv').load();
-
 const PORT = process.env.PORT || 3000;
 
 //For BodyParser
@@ -29,8 +29,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Handlebars
+//For flash Messages
+app.use(cookieParser("secret"));
+app.use(session({ cookie: { maxAge: 60000 } }));
+app.use(flash());
 
+// Handlebars
 app.engine(
   "handlebars",
   exphbs({
