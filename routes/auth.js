@@ -6,18 +6,18 @@ module.exports = function(app, passport) {
   app.post(
     "/signup",
     passport.authenticate("local-signup", {
-      successRedirect: "/dashboard",
+      successRedirect: "/favorites",
       failureRedirect: "/signup",
       failureFlash: true
     })
   );
-  app.get("/dashboard", isLoggedIn, authController.dashboard);
+  app.get("/favorites", isLoggedIn, authController.favorites);
   app.get("/logout", authController.logout);
 
   app.post(
     "/signin",
     passport.authenticate("local-signin", {
-      successRedirect: "/dashboard",
+      successRedirect: "/favorites",
 
       failureRedirect: "/signin"
     })
