@@ -1,4 +1,4 @@
-body, html {
+.index {
   background-image: url("../styles/images/drink.jpg");
   height: 100%;
   background-position: center;
@@ -14,7 +14,6 @@ body, html {
 }
 
 .signup {   
-  /* background-image: url(../styles/images/signup2.jpg); */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../styles/images/signup2.jpg);
   height: 100%;   
   background-repeat: no-repeat;   

@@ -6,8 +6,8 @@ exports.signup = function(req, res) {
 exports.signin = function(req, res) {
   res.render("signin");
 };
-exports.dashboard = function(req, res) {
-  res.render("dashboard");
+exports.favorites = function(req, res) {
+  res.render("favorites");
 };
 exports.logout = function(req, res) {
   req.session.destroy(function() {
