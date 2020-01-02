@@ -16,9 +16,17 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+
+  searchCoctails: function() {
+    var alcohol = $("#alcoholType :selected").text();
+    var alcoholType = alcohol.toLowerCase();
+    var APIKey = "9973533";
+    var drinkName = $("#drinkName").val();
+    var queryURL =
+      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkName;
+
     return $.ajax({
-      url: "api/examples",
+      url: queryURL,
       type: "GET"
     });
   },
@@ -30,32 +38,27 @@ var API = {
   }
 };
 
+$("#searchButton").click(function() {
+  refreshCocktails();
+});
+
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+var refreshCocktails = function() {
+  API.searchCoctails().then(function(data) {
+    $("#drinkImages").empty();
 
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
-
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
-
-      return $li;
+    data.drinks.forEach(i => {
+      var image = $(
+        "<div class=\"swiper-slide\" style=\"background-image:url(" +
+          i.strDrinkThumb +
+          ")\" title=\"" +
+          i.strDrink +
+          "\"></div>"
+      );
+      $("#drinkImages").append(image);
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    swiper.update();
   });
 };
 
