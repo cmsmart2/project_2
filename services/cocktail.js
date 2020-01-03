@@ -21,7 +21,7 @@ module.exports = {
       APIKey;
     return axios.get(queryURL);
 
-    console.log(cocktail, "cocktail");
+    // console.log(cocktail, "cocktail");
   }
   // random: () =>
 };
