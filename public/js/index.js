@@ -49,16 +49,17 @@ var refreshCocktails = function() {
 
     data.drinks.forEach(i => {
       var image = $(
-        "<div class=\"swiper-slide\" style=\"background-image:url(" +
-          i.strDrinkThumb +
-          ")\" title=\"" +
-          i.strDrink +
-          "\"></div>"
+        `<div>
+          <p>${i.strDrink}</p>
+          <img src="${i.strDrinkThumb}" title="${i.strDrink}" />
+          <button class="pure-button" onclick="window.open('https://www.thecocktaildb.com/drink.php?c=${i.idDrink}', '_blank');">View Recipe</button>
+          <button class="pure-button">Favorite ⭐</button>
+          
+          </div>
+          `
       );
       $("#drinkImages").append(image);
     });
-
-    swiper.update();
   });
 };
 
@@ -99,27 +100,3 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-// swiper ready function
-$(document).ready(function() {
-  window.swiper = new Swiper(".swiper-container", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    speed: 1200,
-    autoplay: {
-      delay: 5000
-    },
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true
-    },
-    pagination: {
-      el: ".swiper-pagination"
-    }
-  });
-});
