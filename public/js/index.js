@@ -50,6 +50,7 @@ var refreshCocktails = function() {
     data.drinks.forEach(i => {
       var image = $(
         `<div>
+          <p>${i.strDrink}</p>
           <img src="${i.strDrinkThumb}" title="${i.strDrink}" />
           <button onclick="window.open('https://www.thecocktaildb.com/drink.php?c=${i.idDrink}', '_blank');">View Recipe</button>
           <button>Favorite</button>
