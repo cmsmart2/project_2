@@ -1,11 +1,12 @@
-html, body {
+.index {
   background-color: #000000;
-  /* background-image: url("../styles/images/drink.jpg");
+  /* background-image: url("../styles/images/lime.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%; */
 }
+
 
 .pure-img-responsive {
   max-width: 75%;
@@ -97,7 +98,7 @@ The content `<div>` is where all your content goes.
 #drinkImages p {
   color: white;
   font-size: 25px;
-  background-color: black;
+  /* background-color: black; */
   display: inline-block;
 }
 
@@ -314,6 +315,10 @@ small screens.
 
 .drink-search-button {
   margin-left: 20px;
+}
+
+.star-favorite {
+  color: yellow;
 }
 
 
