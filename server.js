@@ -29,6 +29,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// app.use(function(req, res, next) {
+//   res.locals.isAuthenticated = req.isAuthenticated();
+//   next();
+// });
+
 //For flash Messages
 app.use(cookieParser("secret"));
 app.use(session({ cookie: { maxAge: 60000 } }));
