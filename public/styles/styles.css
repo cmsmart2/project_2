@@ -3,7 +3,8 @@
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-size: 100%;
 }
 
 .pure-img-responsive {
@@ -83,10 +84,30 @@ The content `<div>` is where all your content goes.
   line-height: 1.6em;
 }
 
-#drinkImages>div {
-    margin: 10px;
-    display: inline;
+#drinkImages {
+  max-width: 1320px;
 }
+
+#drinkImages img {
+  width: 400px;
+  height: 400px;
+}
+
+
+#drinkImages>div {
+    margin: 20px;
+    display: inline-block;
+}
+
+#drinkImages button {
+  display: block;
+}
+
+button {
+  margin: 5px;
+}
+
+
 
 
 
