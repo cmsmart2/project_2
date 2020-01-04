@@ -49,7 +49,9 @@ var refreshCocktails = function() {
 
     data.drinks.forEach(i => {
       var image = $(
-        "<div class=\"swiper-slide\" style=\"background-image:url(" +
+        "<div onclick=\"window.open('https://www.thecocktaildb.com/drink.php?c=" +
+          i.idDrink +
+          "', '_blank');\" class=\"swiper-slide\" style=\"background-image:url(" +
           i.strDrinkThumb +
           ")\" title=\"" +
           i.strDrink +
