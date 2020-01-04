@@ -82,6 +82,15 @@ The content `<div>` is where all your content goes.
   margin-bottom: 50px;
   line-height: 1.6em;
 }
+
+#drinkImages>div {
+    margin: 10px;
+    display: inline;
+}
+
+
+
+
 .header {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
