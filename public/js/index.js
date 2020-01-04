@@ -48,22 +48,57 @@ var refreshCocktails = function() {
     $("#drinkImages").empty();
 
     data.drinks.forEach(i => {
+      // const favoriteButton = "";
+      // isAuthenticated
+      //   ? (favoriteButton = "<button class='pure-button'>Favorite ⭐</button>")
+      //   : (favoriteButton = "");
+      console.log(i);
       var image = $(
         `<div class="col-md-3">
           <p>${i.strDrink}</p>
           <img src="${i.strDrinkThumb}" title="${i.strDrink}" />
           <div class="text-center drink-buttons">
           <button class="pure-button" onclick="window.open('https://www.thecocktaildb.com/drink.php?c=${i.idDrink}', '_blank');">View Recipe</button>
-          <button class="pure-button">Favorite ⭐</button>
+          <button class='pure-button favorite-button' data-id="${i.idDrink}">Favorite <i class="fa fa-star-o" aria-hidden="true"></i></button>
           </div>
-          
+        
           </div>
-          `
+         `
       );
       $("#drinkImages").append(image);
     });
   });
 };
+
+$(document).on("click", ".favorite-button", function() {
+  $(this).html(
+    "Unfavorite <i class='fa fa-star star-favorite' aria-hidden='true'></i>"
+  );
+  $(this)
+    .removeClass("favorite-button")
+    .addClass("unfavorite-button");
+  // var Favorites = favorites;
+  // var data = {
+  //   drinkId: $(this).data("id"),
+  //   userId: 1
+  // };
+  // Favorites.create(data).then(function(newFavorite, _created) {
+  //   if (!newFavorite) {
+  //     return done(null, false);
+  //   }
+
+  //   if (newFavorite) {
+  //     return done(null, newFavorite);
+  //   }
+  // });
+});
+
+$(document).on("click", ".unfavorite-button", function() {
+  $(this).html("Favorite <i class='fa fa-star-o' aria-hidden='true'></i>");
+  $(this)
+    .removeClass("unfavorite-button")
+    .addClass("favorite-button");
+});
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
