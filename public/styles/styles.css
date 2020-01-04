@@ -3,7 +3,8 @@
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-size: 100%;
 }
 
 .pure-img-responsive {
@@ -82,6 +83,42 @@ The content `<div>` is where all your content goes.
   margin-bottom: 50px;
   line-height: 1.6em;
 }
+
+#drinkImages {
+  max-width: 1320px;
+}
+
+#drinkImages img {
+  width: 400px;
+  height: 400px;
+  display: block;
+}
+
+#drinkImages p {
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  display: inline-block;
+}
+
+#drinkImages>div {
+    margin: 20px;
+    display: inline-block;
+}
+
+#drinkImages button {
+  display: inline-block;
+}
+
+button {
+  padding: 10px;
+}
+
+
+
+
+
+
 .header {
   background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
